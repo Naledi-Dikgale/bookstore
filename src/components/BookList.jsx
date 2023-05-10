@@ -4,7 +4,6 @@ import { removeBook } from '../redux/Books/bookSlice';
 function BookList() {
   const dispatch = useDispatch();
   const { books } = useSelector((store) => store.books);
-  console.log(books);
 
   return (
     <div>
@@ -18,7 +17,7 @@ function BookList() {
             <button
               type="button"
               onClick={() => {
-                dispatch(removeBook());
+                dispatch(removeBook(book.item_id));
               }}
             >
               Remove Book
