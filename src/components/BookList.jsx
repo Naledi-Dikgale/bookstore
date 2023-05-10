@@ -1,19 +1,29 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { removeBook } from '../redux/Books/bookSlice';
+
 function BookList() {
-  const books = [
-    { id: 1, title: 'Book 1', author: 'Author 1' },
-    { id: 2, title: 'Book 2', author: 'Author 2' },
-    { id: 3, title: 'Book 3', author: 'Author 3' },
-  ];
+  const dispatch = useDispatch();
+  const { books } = useSelector((store) => store.books);
+  console.log(books);
+
   return (
     <div>
       <h2>Books</h2>
       <ul className="bookDisplay">
         {books.map((book) => (
-          <>
+          <div key={book.item_id}>
+            {book.item_id}
             <li>{book.title}</li>
             <li>{book.author}</li>
-            <button type="button">Remove Book</button>
-          </>
+            <button
+              type="button"
+              onClick={() => {
+                dispatch(removeBook());
+              }}
+            >
+              Remove Book
+            </button>
+          </div>
         ))}
       </ul>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { addBook } from '../redux/Books/bookSlice';
 
 const BookForm = () => {
   const [formState, setFormState] = useState({ title: '', author: '' });
@@ -11,9 +11,9 @@ const BookForm = () => {
     setFormState((prevState) => ({
       ...prevState,
       [name]: value,
-      item_id: `item${books.length + 1}`
+      item_id: `item${books.length + 1}`,
     }));
-  }
+  };
 
   const dispatch = useDispatch();
 
@@ -24,7 +24,7 @@ const BookForm = () => {
       dispatch(addBook(formState));
       setFormState({ title: '', author: '' });
     }
-  }
+  };
 
   return (
     <>
@@ -36,6 +36,6 @@ const BookForm = () => {
       </form>
     </>
   );
-}
+};
 
 export default BookForm;
