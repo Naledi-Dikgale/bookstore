@@ -19,6 +19,11 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   return booksArray;
 });
 
+export const removeBookFromApi = createAsyncThunk('books/removeBookFromApi', async (bookId) => {
+  await axios.delete(`${BaseUrl}/${bookId}`);
+  return bookId;
+});
+
 const initialState = {
   books: [],
   loading: false,

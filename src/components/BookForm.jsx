@@ -21,15 +21,15 @@ const BookForm = () => {
     event.preventDefault();
     const { title, author } = formState;
     if (title.trim() !== '' && author.trim() !== '') {
-      const formState = {
+      const formInput = {
         // eslint-disable no-use-before-define
         item_id: `item${books.length + 1}`,
         title: formState.title,
         author: formState.author,
         category: 'Action',
       };
-      dispatch(addBookToApi(formState));
-      dispatch(addBook(formState));
+      dispatch(addBookToApi(formInput));
+      dispatch(addBook(formInput));
       setFormState({ title: '', author: '' });
     }
   };
