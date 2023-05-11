@@ -22,7 +22,6 @@ const BookForm = () => {
     const { title, author } = formState;
     if (title.trim() !== '' && author.trim() !== '') {
       const formInput = {
-        // eslint-disable no-use-before-define
         item_id: `item${books.length + 1}`,
         title: formState.title,
         author: formState.author,
