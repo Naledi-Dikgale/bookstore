@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook } from '../redux/Books/bookSlice';
+import { addBook, addBookToApi } from '../redux/Books/bookSlice';
 
 const BookForm = () => {
   const [formState, setFormState] = useState({ title: '', author: '' });
@@ -21,6 +21,14 @@ const BookForm = () => {
     event.preventDefault();
     const { title, author } = formState;
     if (title.trim() !== '' && author.trim() !== '') {
+      const formState = {
+        // eslint-disable no-use-before-define
+        item_id: `item${books.length + 1}`,
+        title: formState.title,
+        author: formState.author,
+        category: 'Action',
+      };
+      dispatch(addBookToApi(formState));
       dispatch(addBook(formState));
       setFormState({ title: '', author: '' });
     }

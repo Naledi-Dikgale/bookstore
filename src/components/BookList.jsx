@@ -1,10 +1,13 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/Books/bookSlice';
+import { removeBook, fetchBooks } from '../redux/Books/bookSlice';
 
 function BookList() {
   const dispatch = useDispatch();
   const { books } = useSelector((store) => store.books);
-
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
   return (
     <div>
       <h2>Books</h2>
