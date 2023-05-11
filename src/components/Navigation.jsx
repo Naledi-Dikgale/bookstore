@@ -1,12 +1,17 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+
 function Navigation() {
   return (
-    <nav>
+    <nav className="nav">
       <ul>
-        <li>
+        <li className="logo">
+          <h1>Bookstore CMS</h1>
           <a href="/">Home</a>
+          <a href="/">Books</a>
         </li>
         <li>
-          <a href="/categories">Categories</a>
+          <a aria-label="icon" href="/categories"><FontAwesomeIcon icon={faUser} /></a>
         </li>
       </ul>
     </nav>

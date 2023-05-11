@@ -1,3 +1,91 @@
-.bookDisplay {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.addBook {
+  background-color: blue;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.nav {
+  max-width: 100%;
+}
+
+.nav ul {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bookDisplay li {
+  list-style-type: none;
+}
+
+.nav ul li {
   list-style: none;
+  padding: 20px 0;
+}
+
+.nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: blue;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.book-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.bookDisplay {
+  margin: 20px 0;
+}
+
+.book-wrapper {
+  margin: 2rem 0;
+  box-shadow: 2px 2px 2px 2px #888;
+  padding: 5px 15px;
+}
+
+.book-container {
+  max-width: 70%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.book-container form {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px 5px;
+  box-shadow: 2px 5px 4px 5px #888;
+}
+
+.title {
+  width: 70%;
+  height: 30px;
+}
+
+.author {
+  height: 30px;
+}
+
+.remove-book {
+  all: unset;
 }

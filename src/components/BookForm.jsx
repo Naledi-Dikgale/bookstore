@@ -34,14 +34,14 @@ const BookForm = () => {
   };
 
   return (
-    <>
+    <div className="book-form">
       <h3>ADD NEW BOOK</h3>
       <form onSubmit={handleSubmit} className="submit">
         <input type="text" className="title" placeholder="Book title" onChange={handleChange} name="title" value={formState.title} />
         <input type="text" className="author" placeholder="Author" onChange={handleChange} name="author" value={formState.author} />
         <button type="submit" className="addBook">Add Book</button>
       </form>
-    </>
+    </div>
   );
 };
 

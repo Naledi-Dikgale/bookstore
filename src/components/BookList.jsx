@@ -10,14 +10,13 @@ function BookList() {
   }, [dispatch]);
   return (
     <div>
-      <h2>Books</h2>
       <ul className="bookDisplay">
         {books.map((book) => (
-          <div key={book.item_id}>
+          <div className="book-wrapper" key={book.item_id}>
             <li>{book.category}</li>
-            <li>{book.title}</li>
+            <li className="book-title">{book.title}</li>
             <li>{book.author}</li>
-            <button
+            <button className="remove-book"
               type="button"
               onClick={() => {
                 dispatch(removeBook(book.item_id));
