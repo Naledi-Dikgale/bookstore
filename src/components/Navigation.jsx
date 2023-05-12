@@ -7,11 +7,11 @@ function Navigation() {
       <ul>
         <li className="logo">
           <h1>Bookstore CMS</h1>
-          <a href="/">Home</a>
-          <a href="/">Books</a>
+          <a href="/">BOOKS</a>
+          <a href="/">CATEGORIES</a>
         </li>
         <li>
-          <a aria-label="icon" href="/categories"><FontAwesomeIcon icon={faUser} /></a>
+          <a aria-label="icon" href="/categories"><FontAwesomeIcon icon={faUser} className="icon" /></a>
         </li>
       </ul>
     </nav>

@@ -5,12 +5,17 @@
 }
 
 .addBook {
-  background-color: blue;
+  background-color: rgb(0, 119, 255);
   width: 100px;
   height: 30px;
   border: none;
   color: #fff;
   border-radius: 5px;
+}
+
+.remove-book {
+  color: rgb(0, 119, 255);
+  border: none;
 }
 
 .nav {
@@ -28,6 +33,10 @@
   list-style-type: none;
 }
 
+.icon {
+  color: rgb(9, 119, 245);
+}
+
 .nav ul li {
   list-style: none;
   padding: 20px 0;
@@ -42,7 +51,7 @@
 
 .nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: rgba(75, 76, 76, 0.713);
   font-size: 1.2rem;
 }
 
@@ -59,6 +68,9 @@
   margin: 2rem 0;
   box-shadow: 2px 2px 2px 2px #888;
   padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .book-container {
@@ -86,6 +98,17 @@
   height: 30px;
 }
 
-.remove-book {
-  all: unset;
+.circular {
+  border-radius: 5%;
+  width: 60px;
+  height: 60px;
+}
+
+.updateProgress {
+  background-color: rgb(0, 119, 255);
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
 }
