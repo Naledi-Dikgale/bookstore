@@ -1,7 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { MdPerson } from 'react-icons/md';
 
 function Navigation() {
+  const links = document.querySelectorAll('a');
+  links.forEach((link) => {
+    link.addEventListener('click', () => link.classList.add('active-link'));
+  });
   return (
     <nav className="nav">
       <ul>
@@ -10,8 +13,8 @@ function Navigation() {
           <a href="/">BOOKS</a>
           <a href="/">CATEGORIES</a>
         </li>
-        <li>
-          <a aria-label="icon" href="/categories"><FontAwesomeIcon icon={faUser} className="icon" /></a>
+        <li className="icon-container">
+          <a aria-label="icon" href="/categories"><MdPerson className="icon" /></a>
         </li>
       </ul>
     </nav>

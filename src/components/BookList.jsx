@@ -15,26 +15,38 @@ function BookList() {
       <ul className="bookDisplay">
         {books.map((book) => (
           <div className="book-wrapper" key={book.item_id}>
-            <div>
-              <li>{book.category}</li>
-              <li className="book-title">{book.title}</li>
-              <li>{book.author}</li>
-              <button
-                className="remove-book"
-                type="button"
-                onClick={() => {
-                  dispatch(removeBook(book.item_id));
-                  dispatch(removeBookFromApi(book.item_id));
-                }}
-              >
-                Remove Book
-              </button>
+            <div className="left-display">
+              <div className="book-info">
+                <li className="category">{book.category}</li>
+                <li className="book-title">{book.title}</li>
+                <li className="author">{book.author}</li>
+              </div>
+              <div className="buttons">
+                <button type="button">Comments</button>
+                <button
+                  className="remove-book"
+                  type="button"
+                  onClick={() => {
+                    dispatch(removeBook(book.item_id));
+                    dispatch(removeBookFromApi(book.item_id));
+                  }}
+                >
+                  Remove Book
+                </button>
+                <button type="button">Edit</button>
+              </div>
             </div>
-            <div>
-              <CircularProgressbar className="circular" value={66} text="66%" />
+            <div className="progress">
+              <CircularProgressbar className="circular" value={66} />
+              <div className="progress-info">
+                <span className="percentage">66%</span>
+                <span className="completed">Completed</span>
+              </div>
             </div>
-            <div>
-              <button className="updateProgress" type="button">Update Progress</button>
+            <div className="update">
+              <h2 className="chapter">CURRENT CHAPTER</h2>
+              <h3 className="chapter-title">Chapter 17</h3>
+              <button className="updateProgress" type="button">UPDATE PROGRESS</button>
             </div>
           </div>
         ))}
