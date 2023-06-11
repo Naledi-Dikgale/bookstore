@@ -39,7 +39,10 @@ function BookList() {
             <div className="progress">
               <CircularProgressbar className="circular" value={66} />
               <div className="progress-info">
-                <span className="percentage">66%</span>
+                <span className="percentage">
+                  {Math.floor(Math.random() * 100)}
+                  %
+                </span>
                 <span className="completed">Completed</span>
               </div>
             </div>
