@@ -254,3 +254,24 @@ nav {
   background-color: var(--azure);
   color: var(--white);
 }
+
+@media (min-width: 375px) {
+  .progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: none;
+    gap: 1rem;
+    padding-right: 0;
+  }
+
+  .current-chapter {
+    font-size: 0.7rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+  }
+}
