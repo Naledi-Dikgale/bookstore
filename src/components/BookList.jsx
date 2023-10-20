@@ -36,20 +36,23 @@ function BookList() {
                 <button type="button">Edit</button>
               </div>
             </div>
-            <div className="progress">
-              <CircularProgressbar className="circular" value={66} />
-              <div className="progress-info">
-                <span className="percentage">
-                  {Math.floor(Math.random() * 100)}
-                  %
-                </span>
-                <span className="completed">Completed</span>
+            <div className="right-display">
+
+              <div className="progress">
+                <CircularProgressbar className="circular" value={66} />
+                <div className="progress-info">
+                  <span className="percentage">
+                    {Math.floor(Math.random() * 100)}
+                    %
+                  </span>
+                  <span className="completed">Completed</span>
+                </div>
               </div>
-            </div>
-            <div className="update">
-              <h2 className="chapter">CURRENT CHAPTER</h2>
-              <h3 className="chapter-title">Chapter 17</h3>
-              <button className="updateProgress" type="button">UPDATE PROGRESS</button>
+              <div className="update">
+                <h2 className="chapter">CURRENT CHAPTER</h2>
+                <h3 className="chapter-title">Chapter 17</h3>
+                <button className="updateProgress" type="button">UPDATE PROGRESS</button>
+              </div>
             </div>
           </div>
         ))}

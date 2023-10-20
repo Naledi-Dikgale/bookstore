@@ -247,31 +247,31 @@ nav {
 }
 
 .updateProgress {
-  width: 11.5rem;
+  max-width: 11.5rem;
   height: 2.063rem;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   background-color: var(--azure);
   color: var(--white);
+  font-size: 12px;
 }
 
-@media (min-width: 375px) {
-  .progress {
+.right-display {
+  display: flex;
+}
+
+@media (max-width: 500px) {
+  .right-display {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-right: none;
-    gap: 1rem;
-    padding-right: 0;
   }
 
-  .current-chapter {
-    font-size: 0.7rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #121212;
+  .updateProgress {
+    width: 100px;
+    padding: 3px 0;
+  }
+
+  .chapter {
+    font-size: 12px;
   }
 }
