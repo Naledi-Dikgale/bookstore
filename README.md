@@ -98,6 +98,8 @@ You can deploy this project through Github Pages
 
 - [ ] **Changes will be made as comming project requirement.**
 
+- [ ] **Full functionality and responsiveness.**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
